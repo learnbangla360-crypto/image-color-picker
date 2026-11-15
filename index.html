@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Image Color Picker – Free Online HEX &amp; RGB Finder</title>
+<meta name="description" content="Free online color picker from image. Click any pixel to copy its HEX, RGB or HSL code. A hex color picker that runs in your browser, no signup.">
+<link rel="canonical" href="https://imagecolorpicker.globrik.com/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0f5c6e">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Image Color Picker – Free Online HEX &amp; RGB Finder">
+<meta property="og:description" content="Upload a photo, click any pixel and copy its HEX, RGB or HSL code. Free, online and private.">
+<meta property="og:url" content="https://imagecolorpicker.globrik.com/">
+<meta property="og:site_name" content="Globrik">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Image Color Picker – Free Online HEX &amp; RGB Finder">
+<meta name="twitter:description" content="Pick exact colors from any image in your browser. Copy HEX, RGB and HSL codes.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f5c6e'/%3E%3Ccircle cx='32' cy='32' r='14' fill='%23fff'/%3E%3Ccircle cx='32' cy='32' r='7' fill='%232563eb'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebApplication","name":"Image Color Picker","url":"https://imagecolorpicker.globrik.com/","description":"Free online image color picker that reads the exact HEX, RGB and HSL value of any pixel in a photo, entirely in your browser.","applicationCategory":"MultimediaApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://globrik.com/"},{"@type":"ListItem","position":2,"name":"Image Color Picker","item":"https://imagecolorpicker.globrik.com/"}]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is this image color picker free?","acceptedAnswer":{"@type":"Answer","text":"Yes. It's free with no signup, no watermark and no limit on how many colors you pick. Your own device does the work, so there's nothing to install and nothing to pay for."}},
+{"@type":"Question","name":"Is it safe to use my photos here?","acceptedAnswer":{"@type":"Answer","text":"Your images are processed in your browser and are never uploaded. The file is drawn onto a canvas on your device and pixel values are read locally. Nothing is sent to a server, so private screenshots and client files stay with you."}},
+{"@type":"Question","name":"Do I need to create an account?","acceptedAnswer":{"@type":"Answer","text":"No. Open the page, drop in a picture and start picking. There's no login, no email prompt and no trial period, so you can finish in a few seconds."}},
+{"@type":"Question","name":"Which image formats and sizes are supported?","acceptedAnswer":{"@type":"Answer","text":"JPG, PNG, WebP, GIF and BMP up to 50 MB. Images larger than 4096 pixels on the long side are scaled down for sampling to keep the tool fast, so a single-pixel pick on a huge photo can differ slightly."}},
+{"@type":"Question","name":"Does it work on my phone?","acceptedAnswer":{"@type":"Answer","text":"Yes. Tap anywhere on the image to pick a color. The layout stacks on small screens and every button is at least 44 pixels tall. For pixel-level accuracy, crop the image first or use the arrow keys on a keyboard."}},
+{"@type":"Question","name":"Is the picked color exact, or is there quality loss?","acceptedAnswer":{"@type":"Answer","text":"You get the exact value your browser decoded for that pixel, and nothing is recompressed. JPG files contain compression noise, though, so neighboring pixels in a flat-looking area can differ by a few values."}},
+{"@type":"Question","name":"Can I use it offline?","acceptedAnswer":{"@type":"Answer","text":"After the page has loaded, picking works without a connection because no server is involved. Loading the page itself offline depends on your browser cache, since this is a normal web page and not an installable app."}},
+{"@type":"Question","name":"What's the difference between HEX, RGB and HSL?","acceptedAnswer":{"@type":"Answer","text":"They describe the same color three ways. HEX is a six-digit code used in CSS and design tools. RGB lists red, green and blue from 0 to 255. HSL gives hue in degrees plus saturation and lightness percentages, which is easier to adjust by hand."}},
+{"@type":"Question","name":"How do I find the HEX code of a color in a picture?","acceptedAnswer":{"@type":"Answer","text":"Upload the picture, click the exact spot, and read the HEX line in the Picked Color panel. Press Copy to put it on your clipboard. Choose a solid area rather than an edge, since edges blend into their background and change the result."}},
+{"@type":"Question","name":"Can I pick a color from a screenshot?","acceptedAnswer":{"@type":"Answer","text":"Yes. Paste a screenshot with Ctrl+V or Cmd+V, or drop the saved file. Screenshots suit brand colors best because they keep the on-screen values, while a phone photo of a screen adds glare and white balance shifts."}},
+{"@type":"Question","name":"How do I get a color palette from an image?","acceptedAnswer":{"@type":"Answer","text":"Load the image and check the Image Palette section. It lists up to six dominant colors. Click a chip to load it, or press Copy palette as CSS to get custom properties you can paste straight into a stylesheet."}},
+{"@type":"Question","name":"Is a colour picker the same as a color picker?","acceptedAnswer":{"@type":"Answer","text":"Yes. “Colour” is the British, Canadian and Australian spelling and “color” is the American one, but both names mean the same tool. Whichever you search for, this page lets you pick a color from any image and copy its HEX, RGB or HSL code."}},
+{"@type":"Question","name":"Why does a color look different in Photoshop or Figma?","acceptedAnswer":{"@type":"Answer","text":"Color profiles and display settings. This tool reads the values your browser decodes, and browsers may convert images that carry embedded profiles. Small differences against design software are normal, especially on wide-gamut photos."}}
+]}]}
+</script>
+<style>
+:root{--bg:#f2f5fa;--fg:#111827;--mut:#4b5563;--card:#fff;--bd:#c9d2e0;--ac:#2563eb;--acd:#1d4ed8;--top:#0f5c6e;--drop:#d6dce8;--soft:#eef2f8;color-scheme:light dark}
+@media(prefers-color-scheme:dark){:root{--bg:#0e141d;--fg:#e8edf5;--mut:#a3afc2;--card:#151d2a;--bd:#2b3a50;--ac:#6ea0ff;--acd:#93b8ff;--top:#1a8aa3;--drop:#1c2738;--soft:#1a2434}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;border-top:3px solid var(--top)}
+a{color:var(--ac)}a:hover{color:var(--acd)}
+:focus-visible{outline:3px solid var(--ac);outline-offset:2px}
+.w{max-width:1150px;margin:0 auto;padding:0 16px}
+header{background:var(--card);border-bottom:1px solid var(--bd)}
+header .w{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;min-height:56px}
+.logo{font-weight:800;font-size:1.3rem;color:var(--fg);text-decoration:none;letter-spacing:-.3px}
+nav a{display:inline-block;padding:10px 4px;margin-right:10px;color:var(--fg);text-decoration:none;font-weight:600;font-size:.95rem}
+nav a:hover{color:var(--ac)}
+h1{font-size:clamp(1.7rem,4vw,2.3rem);line-height:1.2;margin:22px 0 6px;letter-spacing:-.4px}
+.lead{color:var(--mut);margin:0 0 16px}
+.tool{display:grid;grid-template-columns:340px 1fr;background:var(--card);border:1px solid var(--bd);border-radius:14px;overflow:hidden;min-height:430px}
+.panel{padding:16px;border-right:1px solid var(--bd);display:flex;flex-direction:column;gap:14px}
+.panel h2{font-size:1.1rem;margin:0 0 6px}
+.stage{padding:10px;background:var(--soft);display:flex;align-items:flex-start;justify-content:center;min-width:0}
+#drop{width:100%;min-height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:2px dashed var(--mut);border-radius:14px;background:var(--drop);cursor:pointer;padding:20px}
+#drop.over{border-color:var(--ac);background:var(--soft)}
+#drop strong{font-size:1.1rem;color:var(--mut)}#drop small{color:var(--mut);margin-top:10px}
+#wrap{position:relative;display:none;max-width:100%;line-height:0}
+#cv{max-width:100%;height:auto;max-height:70vh;cursor:crosshair;border-radius:8px;background:repeating-conic-gradient(#ccc 0 25%,#fff 0 50%) 0 0/16px 16px;touch-action:manipulation}
+#mk{position:absolute;width:18px;height:18px;margin:-9px 0 0 -9px;border:2px solid #fff;border-radius:50%;box-shadow:0 0 0 2px #000;pointer-events:none;display:none}
+.sw{height:84px;border-radius:10px;border:1px solid var(--bd);background:var(--soft);display:flex;align-items:flex-end;padding:8px}
+.sw span{font-weight:700;font-size:.85rem;background:rgba(0,0,0,.55);color:#fff;padding:2px 8px;border-radius:6px}
+.row{display:grid;grid-template-columns:46px 1fr 70px;gap:8px;align-items:center}
+.row label{font-size:.82rem;font-weight:700;color:var(--mut)}
+.row output{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.95rem;background:var(--soft);border:1px solid var(--bd);border-radius:8px;padding:9px 10px;min-height:44px;display:flex;align-items:center;overflow:hidden;white-space:nowrap}
+button{font:inherit;min-height:44px;padding:0 14px;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--fg);font-weight:600;cursor:pointer}
+button:hover:not(:disabled){border-color:var(--ac)}
+button:disabled{opacity:.5;cursor:not-allowed}
+.pri{background:var(--ac);border-color:var(--ac);color:#fff}.pri:hover:not(:disabled){background:var(--acd);border-color:var(--acd)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.lp{display:flex;gap:12px;align-items:center}
+#lp{width:110px;height:110px;border:1px solid var(--bd);border-radius:10px;image-rendering:pixelated;background:var(--soft);flex:none}
+.sm{font-size:.85rem;color:var(--mut);margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;min-height:34px}
+.chip{width:44px;height:44px;padding:0;border-radius:8px;border:2px solid var(--bd)}
+#st{min-height:24px;font-size:.92rem;font-weight:600;margin:10px 2px}
+#toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:#16a34a;color:#fff;font-weight:700;padding:12px 20px;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.25);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:50;max-width:90vw;text-align:center}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+.err{color:#b91c1c}@media(prefers-color-scheme:dark){.err{color:#fca5a5}}
+.box{background:var(--card);border:1px solid var(--bd);border-left:4px solid var(--ac);border-radius:10px;padding:14px 18px;margin:18px 0}
+.box h2{margin:0 0 6px;font-size:1.15rem}.box ol{margin:6px 0 0;padding-left:22px}
+main section{margin:34px 0}
+main h2{font-size:1.5rem;line-height:1.3;margin:0 0 10px}
+main h3{font-size:1.1rem;margin:18px 0 4px}
+.toc{display:flex;flex-wrap:wrap;gap:6px 14px;padding:0;list-style:none;margin:0}
+.toc a{font-size:.92rem}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:480px;background:var(--card)}
+th,td{border:1px solid var(--bd);padding:9px 12px;text-align:left;vertical-align:top;font-size:.95rem}
+th{background:var(--soft)}
+details{background:var(--card);border:1px solid var(--bd);border-radius:10px;margin:8px 0}
+summary{cursor:pointer;padding:12px 16px;font-weight:700;min-height:44px}
+details p{margin:0;padding:0 16px 14px}
+.rel{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;padding:0;list-style:none}
+.rel a{display:block;padding:12px 14px;background:var(--card);border:1px solid var(--bd);border-radius:10px;text-decoration:none;font-weight:600}
+footer{background:var(--card);border-top:1px solid var(--bd);margin-top:40px;padding:22px 0;font-size:.92rem;color:var(--mut)}
+footer a{margin-right:14px}
+@media(max-width:820px){.tool{grid-template-columns:1fr}.panel{border-right:0;border-top:1px solid var(--bd);order:2}.stage{order:1}#drop{min-height:260px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="w"><a class="logo" href="https://globrik.com/">Globrik</a>
+<nav aria-label="Globrik tools"><a href="https://resizeimage.globrik.com/">Resize</a><a href="https://compressimage.globrik.com/">Compress</a><a href="https://cropimage.globrik.com/">Crop</a><a href="https://bgremover.globrik.com/">Background Remover</a><a href="https://imagetotext.globrik.com/">Image to Text</a></nav></div></header>
+
+<main class="w">
+<h1>Image Color Picker – Free Online HEX, RGB &amp; HSL Finder</h1>
+<p class="lead">Drop in a photo, click any pixel, and copy its exact color code in one tap.</p>
+
+<div class="tool" id="tool">
+<div class="panel">
+<div><h2>Picked Color</h2>
+<div class="sw" id="sw" aria-hidden="true"><span id="swl">No color yet</span></div></div>
+<div>
+<div class="row"><label for="vh">HEX</label><output id="vh">–</output><button type="button" data-c="vh" disabled aria-label="Copy HEX">Copy</button></div>
+<div class="row" style="margin-top:6px"><label for="vr">RGB</label><output id="vr">–</output><button type="button" data-c="vr" disabled aria-label="Copy RGB">Copy</button></div>
+<div class="row" style="margin-top:6px"><label for="vs">HSL</label><output id="vs">–</output><button type="button" data-c="vs" disabled aria-label="Copy HSL">Copy</button></div>
+<p class="sm" id="ct" style="margin-top:8px">Text contrast appears after you pick a color.</p>
+</div>
+<div class="lp"><canvas id="lp" width="11" height="11" aria-label="Magnified view of pixels around your pointer"></canvas><p class="sm" id="hv">Move over the image to preview the pixel under your pointer. Arrow keys work too.</p></div>
+<div><h2>Image Palette</h2><div class="chips" id="pal"><p class="sm">Dominant colors show up here.</p></div>
+<button type="button" id="cp" style="margin-top:8px;width:100%" disabled>Copy palette as CSS</button></div>
+<div><h2>Recent Picks</h2><div class="chips" id="hi"><p class="sm">Your last 12 picks.</p></div></div>
+<div class="pair"><button type="button" id="rs" disabled>Reset</button><button type="button" id="ch">Change image</button></div>
+</div>
+<div class="stage">
+<div id="drop" role="button" tabindex="0" aria-label="Drop an image here or press Enter to choose a file"><strong>Drop an image here, tap to choose, or paste</strong><small>JPG, PNG, WebP, GIF, BMP up to 50 MB. Stays in your browser.</small></div>
+<div id="wrap"><canvas id="cv" tabindex="0" aria-label="Your image. Click or press Enter to pick the color under the marker. Arrow keys move the marker."></canvas><div id="mk"></div></div>
+</div>
+</div>
+<input type="file" id="fi" accept="image/jpeg,image/png,image/webp,image/gif,image/bmp" hidden>
+<div id="st" role="status" aria-live="polite"></div>
+<div id="toast" aria-hidden="true"></div>
+
+<div class="box" id="how"><h2>Quick answer: how to pick a color from an image</h2>
+<p style="margin:0">Upload or paste your image, click the exact pixel you want, then press Copy beside the HEX, RGB or HSL value. The code is read straight from the pixel, so it matches what your browser shows.</p>
+<ol><li>Drop an image onto the box above, or tap it to browse.</li><li>Hover to preview, then click (or press Enter) to pick.</li><li>Copy the HEX, RGB or HSL code.</li><li>Use the palette or recent picks to grab more colors.</li></ol></div>
+
+<nav aria-label="On this page"><ul class="toc"><li><a href="#intro">Overview</a></li><li><a href="#why">Why use it</a></li><li><a href="#how-it-works">How it works</a></li><li><a href="#formats">HEX vs RGB vs HSL</a></li><li><a href="#guide">Step-by-step</a></li><li><a href="#devices">Phone &amp; desktop</a></li><li><a href="#palette-guide">Palette</a></li><li><a href="#specs">Specs</a></li><li><a href="#uses">Use cases</a></li><li><a href="#tips">Tips</a></li><li><a href="#privacy">Privacy</a></li><li><a href="#compare">Alternatives</a></li><li><a href="#fix">Troubleshooting</a></li><li><a href="#glossary">Glossary</a></li><li><a href="#faq">FAQ</a></li></ul></nav>
+
+<article>
+<section id="intro"><h2>What this image color picker does</h2>
+<p>This free online image color picker reads the exact color of any pixel in a photo, screenshot or logo and gives it to you as HEX, RGB and HSL. There’s nothing to install and no account to make.</p>
+<p>Whether you search for a color picker, a colour picker (the spelling used in the UK, Canada and Australia) or an eyedropper, the idea is the same: point at a pixel, get its code. This page is a color picker from image files, so it works on photos, logos, screenshots and product shots alike.</p>
+<p>It also builds a six-color palette from the dominant shades in your picture and checks whether black or white text reads better on the color you picked. Designers, developers, painters and anyone matching a paint chip to a screenshot can use it to stop guessing and start copying real values.</p></section>
+
+<section id="why"><h2>Why use this tool</h2>
+<ul>
+<li><strong>Pixel-exact results.</strong> You get the value your browser decoded for that pixel, not an estimate or a nearby average.</li>
+<li><strong>No signup, no watermark.</strong> Open it and use it.</li>
+<li><strong>Private by design.</strong> The image is drawn on a canvas on your device and never uploaded.</li>
+<li><strong>Precision controls.</strong> A magnifier shows the pixels around your pointer, and the arrow keys nudge the marker one pixel at a time.</li>
+<li><strong>Three formats at once.</strong> HEX for CSS, RGB for code and design apps, HSL for quick tweaks. It doubles as a hex color picker and an RGB finder in one place.</li>
+</ul></section>
+
+<section id="how-it-works"><h2>How a color picker from an image works</h2>
+<p>When you add a file, your browser decodes it into a grid of pixels. Each pixel is stored as four numbers: red, green, blue and alpha (opacity), every one from 0 to 255. This tool draws that grid onto an HTML canvas, then reads the numbers at the spot you clicked using the standard <code>getImageData</code> method.</p>
+<p>That makes it a lookup, not a guess. There’s no averaging, no AI estimate and no server round trip. Think of it as an eyedropper tool online that works on files and screenshots instead of your live screen. The HEX and HSL codes are simple conversions of the same red, green and blue numbers, so all three always describe one identical color.</p></section>
+
+<section id="formats"><h2>HEX vs RGB vs HSL: which color code should you copy?</h2>
+<p>Every pick shows three formats because different tools expect different ones. Here’s the same blue in each:</p>
+<div class="tw"><table><thead><tr><th>Format</th><th>Example</th><th>Best for</th></tr></thead><tbody>
+<tr><td>HEX</td><td><code>#2563EB</code></td><td>CSS, Figma, Canva, brand guidelines, most hex color picker workflows</td></tr>
+<tr><td>RGB</td><td><code>rgb(37, 99, 235)</code></td><td>JavaScript, canvas code, app settings and sliders that use 0–255</td></tr>
+<tr><td>HSL</td><td><code>hsl(221, 83%, 53%)</code></td><td>Making lighter, darker or duller variants, hover states and themes</td></tr>
+</tbody></table></div>
+<p>If you’re unsure, copy HEX. As a hex color picker, this tool returns six-digit uppercase codes like <code>#2563EB</code>, ready to paste into CSS. It’s the shortest and works in nearly every design tool and stylesheet. Switch to HSL when you want to adjust the lightness value by a few points without picking a new color.</p></section>
+
+<section id="guide"><h2>Step-by-step guide to using the image color picker</h2>
+<h3>1. Load your image</h3>
+<p>Drag a file onto the dashed box, tap it to browse, or press Ctrl+V (Cmd+V on Mac) to paste a screenshot straight from your clipboard. Pasting is the fastest route when you’ve just captured part of a screen.</p>
+<h3>2. Aim with the magnifier</h3>
+<p>Move your pointer over the image. The magnifier on the left shows an 11×11 pixel grid with the center pixel at its middle, and the line under it shows that pixel’s HEX code. On a phone, tap once to pick, then use the magnifier to confirm it was the right spot.</p>
+<h3>3. Pick and copy</h3>
+<p>Click, tap, or press Enter or Space on the focused image. The swatch updates and the three codes fill in. Press Copy next to the format you need. A confirmation appears under the tool.</p>
+<h3>4. Collect a palette</h3>
+<p>The Image Palette section lists up to six dominant colors. Click any chip to load it into the picker, or press “Copy palette as CSS” to get a ready-made block of custom properties like <code>--color-1: #1A2B3C;</code>.</p>
+<h3>5. Get cleaner samples</h3>
+<p>If you’re sampling a small icon, <a href="https://cropimage.globrik.com/">crop the image</a> to the icon first so it fills the view. For large photos, <a href="https://resizeimage.globrik.com/">resize the image</a> to a manageable size before you start.</p></section>
+
+<section id="devices"><h2>How to find a color code from an image on phone, Windows or Mac</h2>
+<h3>On a phone</h3>
+<p>Open this page, tap the box and choose a photo from your gallery or take a new one. Tap the spot you want. If your finger covers the target, tap, then check the magnifier to confirm the pixel.</p>
+<h3>On Windows or Mac</h3>
+<p>Drag a file in, or paste a capture. On Windows, press Win+Shift+S, select an area, then press Ctrl+V on this page. On a Mac, press Control+Shift+Command+4 to copy a selection, then Command+V here. This is the quickest way to find a color code from anything visible on your screen, including websites, apps and PDFs.</p>
+<h3>From a PDF or video frame</h3>
+<p>Screenshot the part you need and paste it. Need a still from a PDF first? Our <a href="https://pdftojpg.globrik.com/">PDF to JPG converter</a> turns pages into images you can sample.</p></section>
+
+<section id="palette-guide"><h2>Generate a color palette from an image</h2>
+<p>Besides single picks, the tool works as a simple image palette generator. It shrinks your picture to a 48×48 sample, groups similar shades into 16 levels per channel, counts how many pixels fall in each group, and keeps up to six that are clearly different from each other.</p>
+<p>The result reflects the <em>most common</em> colors, not necessarily the most eye-catching ones. A small red button on a mostly gray screenshot may not appear, so click it directly. Use “Copy palette as CSS” to paste the colors into a stylesheet as <code>--color-1</code>, <code>--color-2</code> and so on. Turn a palette into icons with the <a href="https://favicongenerator.globrik.com/">Favicon Generator</a>, or read text from the same image with <a href="https://imagetotext.globrik.com/">Image to Text</a>.</p></section>
+
+<section id="specs"><h2>Supported formats, specs and limits</h2>
+<div class="tw"><table><caption class="sm" style="text-align:left;padding:4px 0">Limits that apply to this page</caption>
+<thead><tr><th>Item</th><th>Detail</th></tr></thead><tbody>
+<tr><td>Input formats</td><td>JPG/JPEG, PNG, WebP, GIF (first frame), BMP</td></tr>
+<tr><td>Maximum file size</td><td>50 MB</td></tr>
+<tr><td>Sampling size</td><td>Images over 4096 px on the long side are scaled down before sampling</td></tr>
+<tr><td>Output formats</td><td>HEX (#RRGGBB), RGB (0–255), HSL (degrees and percentages)</td></tr>
+<tr><td>Transparency</td><td>Semi-transparent pixels are blended over white; fully transparent pixels are flagged</td></tr>
+<tr><td>Palette</td><td>Up to 6 dominant colors, grouped in 16 levels per channel</td></tr>
+<tr><td>History</td><td>Last 12 picks, kept only while the page is open</td></tr>
+<tr><td>Input methods</td><td>Drag and drop, file browser, clipboard paste, keyboard</td></tr>
+</tbody></table></div></section>
+
+<section id="uses"><h2>Use cases</h2>
+<ul>
+<li><strong>Web designers</strong> use the color picker to match a client’s logo color without asking for a brand guide.</li>
+<li><strong>Front-end developers</strong> pull HEX values from a mockup screenshot into CSS.</li>
+<li><strong>Brand managers</strong> check that a printed flyer and a website use the same blue.</li>
+<li><strong>Painters and crafters</strong> photograph a swatch or a sunset and note the closest digital color.</li>
+<li><strong>Interior decorators</strong> capture wall or fabric tones from room photos for mood boards.</li>
+<li><strong>Teachers and students</strong> explore how RGB and HSL numbers map to real colors.</li>
+<li><strong>Social media creators</strong> build a thumbnail palette from a hero photo.</li>
+</ul></section>
+
+<section id="features"><h2>Key features and benefits</h2>
+<ul>
+<li>Live pixel magnifier with 11×11 zoom</li>
+<li>One-click copy for HEX, RGB and HSL</li>
+<li>Dominant-color palette with CSS export</li>
+<li>Black or white text contrast ratio for each pick</li>
+<li>Clipboard paste, drag and drop, and full keyboard control</li>
+<li>Light and dark themes that follow your system</li>
+</ul></section>
+
+<section id="tips"><h2>Expert tips and common mistakes</h2>
+<h3>Don’t trust one pixel in a JPG</h3>
+<p>JPG compression adds tiny color noise. If a sky looks like one flat blue, click three or four nearby pixels and use the one that repeats. Photos with gradients should be sampled at the exact spot where you need the color, not “somewhere around there.”</p>
+<h3>Avoid anti-aliased edges</h3>
+<p>The edge of a letter or logo blends into the background. Pick from the thick middle of a shape, not its outline.</p>
+<h3>Screenshots beat photos for brand colors</h3>
+<p>A phone photo of a poster bakes in lighting and white balance. A screenshot of the digital original keeps the real values. Save screenshots as PNG, since lossy formats shift colors slightly.</p>
+<h3>Check contrast before you use it</h3>
+<p>A color that looks great as a background can fail for text. The contrast line below the codes follows the WCAG formula, where 4.5:1 is the usual minimum for body text. Read more about <a href="https://en.wikipedia.org/wiki/Web_colors" rel="noopener">web colors on Wikipedia</a>.</p>
+<h3>Keep the file small if you only need colors</h3>
+<p>You don’t need a 40 MB original. <a href="https://compressimage.globrik.com/">Compressing the image</a> first keeps sampling quick, but compress lightly, since heavy compression changes colors.</p></section>
+
+<section id="privacy"><h2>Privacy and security</h2>
+<p>Your files are processed in your browser and are never uploaded. When you add an image, the page draws it onto an HTML canvas on your device and reads pixel values from that canvas. There’s no upload step in the code, and your recent picks live only in memory until you close or refresh the tab.</p>
+<p>The page doesn’t ask for an account, so there’s no login data to protect. Use only images you own or have the right to use.</p></section>
+
+<section id="compare"><h2>This tool vs. alternatives</h2>
+<div class="tw"><table><thead><tr><th>Feature</th><th>This browser tool</th><th>Desktop design software</th><th>Server-based online pickers</th></tr></thead><tbody>
+<tr><td>Install needed</td><td>No</td><td>Yes</td><td>No</td></tr>
+<tr><td>Image leaves your device</td><td>No</td><td>No</td><td>Often yes</td></tr>
+<tr><td>Cost</td><td>Free</td><td>Free or paid</td><td>Varies</td></tr>
+<tr><td>Best for</td><td>Quick codes from any image</td><td>Full color-managed workflows</td><td>Quick checks when upload is acceptable</td></tr>
+<tr><td>Color-profile control</td><td>Browser decoding only</td><td>Advanced</td><td>Varies</td></tr>
+</tbody></table></div>
+<p>If you need strict print color management, a desktop editor is the right pick. For fast web colors, a browser-based color picker from image is usually quicker.</p></section>
+
+<section id="fix"><h2>Troubleshooting</h2>
+<ul>
+<li><strong>“Unsupported file type” message.</strong> Convert the file to JPG or PNG first. HEIC images need a conversion, and our <a href="https://heictojpg.globrik.com/">HEIC to JPG converter</a> handles that.</li>
+<li><strong>File too large.</strong> The limit is 50 MB. Shrink it with the resize or compress tools, then try again.</li>
+<li><strong>Image won’t load.</strong> The file may be corrupted or renamed from another format. Re-export it from the original app.</li>
+<li><strong>Copy button does nothing.</strong> Some browsers block clipboard access on insecure pages. Select the code in the box and copy it manually.</li>
+<li><strong>Color differs from my design app.</strong> Check the app’s color profile. Browsers may convert profiled images to the screen’s space.</li>
+<li><strong>Pick lands off target on a phone.</strong> Zoom the page, or crop the image so your target is larger.</li>
+<li><strong>Transparent area returns white or a warning.</strong> The pixel has no color. Pick from the opaque part of the image.</li>
+<li><strong>Paste doesn’t work.</strong> Click the page first, then paste. Only image data is accepted, not file paths.</li>
+</ul></section>
+
+<section id="glossary"><h2>Glossary</h2>
+<dl>
+<dt><strong>HEX</strong></dt><dd>A six-digit hexadecimal color code such as #2563EB, used heavily in CSS.</dd>
+<dt><strong>RGB</strong></dt><dd>A color model that mixes red, green and blue light, each from 0 to 255.</dd>
+<dt><strong>HSL</strong></dt><dd>Hue (0–360°), saturation and lightness. It’s handy for making a color lighter or duller.</dd>
+<dt><strong>Dominant color</strong></dt><dd>A shade that covers a large share of an image’s pixels.</dd>
+<dt><strong>Contrast ratio</strong></dt><dd>A WCAG measure of how readable text is against a background. See <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value" rel="noopener">CSS color values on MDN</a> for syntax.</dd>
+</dl></section>
+
+<section id="faq"><h2>Frequently asked questions</h2>
+<details><summary>Is this image color picker free?</summary><p>Yes. It’s free with no signup, no watermark and no limit on how many colors you pick. Your own device does the work, so there’s nothing to install and nothing to pay for.</p></details>
+<details><summary>Is it safe to use my photos here?</summary><p>Your images are processed in your browser and are never uploaded. The file is drawn onto a canvas on your device and pixel values are read locally. Nothing is sent to a server, so private screenshots and client files stay with you.</p></details>
+<details><summary>Do I need to create an account?</summary><p>No. Open the page, drop in a picture and start picking. There’s no login, no email prompt and no trial period, so you can finish in a few seconds.</p></details>
+<details><summary>Which image formats and sizes are supported?</summary><p>JPG, PNG, WebP, GIF and BMP up to 50 MB. Images larger than 4096 pixels on the long side are scaled down for sampling to keep the tool fast, so a single-pixel pick on a huge photo can differ slightly.</p></details>
+<details><summary>Does it work on my phone?</summary><p>Yes. Tap anywhere on the image to pick a color. The layout stacks on small screens and every button is at least 44 pixels tall. For pixel-level accuracy, crop the image first or use the arrow keys on a keyboard.</p></details>
+<details><summary>Is the picked color exact, or is there quality loss?</summary><p>You get the exact value your browser decoded for that pixel, and nothing is recompressed. JPG files contain compression noise, though, so neighboring pixels in a flat-looking area can differ by a few values.</p></details>
+<details><summary>Can I use it offline?</summary><p>After the page has loaded, picking works without a connection because no server is involved. Loading the page itself offline depends on your browser cache, since this is a normal web page and not an installable app.</p></details>
+<details><summary>What’s the difference between HEX, RGB and HSL?</summary><p>They describe the same color three ways. HEX is a six-digit code used in CSS and design tools. RGB lists red, green and blue from 0 to 255. HSL gives hue in degrees plus saturation and lightness percentages, which is easier to adjust by hand.</p></details>
+<details><summary>How do I find the HEX code of a color in a picture?</summary><p>Upload the picture, click the exact spot, and read the HEX line in the Picked Color panel. Press Copy to put it on your clipboard. Choose a solid area rather than an edge, since edges blend into their background and change the result.</p></details>
+<details><summary>Can I pick a color from a screenshot?</summary><p>Yes. Paste a screenshot with Ctrl+V or Cmd+V, or drop the saved file. Screenshots suit brand colors best because they keep the on-screen values, while a phone photo of a screen adds glare and white balance shifts.</p></details>
+<details><summary>How do I get a color palette from an image?</summary><p>Load the image and check the Image Palette section. It lists up to six dominant colors. Click a chip to load it, or press Copy palette as CSS to get custom properties you can paste straight into a stylesheet.</p></details>
+<details><summary>Is a colour picker the same as a color picker?</summary><p>Yes. “Colour” is the British, Canadian and Australian spelling and “color” is the American one, but both names mean the same tool. Whichever you search for, this page lets you pick a color from any image and copy its HEX, RGB or HSL code.</p></details>
+<details><summary>Why does a color look different in Photoshop or Figma?</summary><p>Color profiles and display settings. This tool reads the values your browser decodes, and browsers may convert images that carry embedded profiles. Small differences against design software are normal, especially on wide-gamut photos.</p></details>
+</section>
+
+<section id="conclusion"><h2>Pick your first color now</h2>
+<p>Need a quick color picker for a mockup, a colour picker for a print brief, or a hex color picker for CSS? An image color picker saves you from eyeballing shades and guessing at codes. Scroll back up, drop in an image, and copy the exact HEX, RGB or HSL you need. It’s free, it’s private, and it takes a few seconds. Need to prep the image first? Try the tools below.</p></section>
+
+<section id="related"><h2>More free Globrik image tools</h2>
+<ul class="rel">
+<li><a href="https://cropimage.globrik.com/">Crop Image – trim to the area you want</a></li>
+<li><a href="https://resizeimage.globrik.com/">Resize Image – set exact dimensions</a></li>
+<li><a href="https://compressimage.globrik.com/">Compress Image File – shrink file size</a></li>
+<li><a href="https://favicongenerator.globrik.com/">Favicon Generator – make icons from your colors</a></li>
+<li><a href="https://imagetobase64.globrik.com/">Image to Base64 Converter – embed images in code</a></li>
+<li><a href="https://bgremover.globrik.com/">Background Remover – cut out subjects</a></li>
+</ul></section>
+</article>
+</main>
+
+<footer><div class="w">
+<p><a href="https://sites.google.com/view/globriklegal/privacy-policy">Privacy Policy</a><a href="https://sites.google.com/view/globriklegal/terms-of-use">Terms</a><a href="https://sites.google.com/view/globriklegal/contact">Contact</a><a href="https://sites.google.com/view/globriklegal/about">About</a></p>
+<p>Disclaimer: use only images you own or have the rights to use. Picked values depend on how your browser decodes the image and may differ slightly from other software.</p>
+<p>© <span id="yr">2026</span> <a href="https://globrik.com/">Globrik</a></p>
+</div></footer>
+
+<script>
+try{document.getElementById('yr').textContent=new Date().getFullYear()}catch(e){}
+(function(){try{
+var $=function(i){return document.getElementById(i)};
+var MAXB=50*1024*1024,MAXS=4096,OK=['image/jpeg','image/png','image/webp','image/gif','image/bmp'];
+var cv=$('cv'),ctx=cv.getContext('2d',{willReadFrequently:true}),lp=$('lp'),lx=lp.getContext('2d');
+var hist=[],pal=[],pos={x:0,y:0},loaded=false,objUrl=null,cur=null;
+function st(m,e){var s=$('st');s.textContent=m;s.className=e?'err':''}
+function hex(c){return '#'+c.map(function(v){return v.toString(16).padStart(2,'0')}).join('').toUpperCase()}
+function hsl(c){var r=c[0]/255,g=c[1]/255,b=c[2]/255,mx=Math.max(r,g,b),mn=Math.min(r,g,b),h=0,s=0,l=(mx+mn)/2,d=mx-mn;
+if(d){s=l>.5?d/(2-mx-mn):d/(mx+mn);h=mx==r?(g-b)/d+(g<b?6:0):mx==g?(b-r)/d+2:(r-g)/d+4;h*=60}
+return 'hsl('+Math.round(h)+', '+Math.round(s*100)+'%, '+Math.round(l*100)+'%)'}
+function lum(c){var f=function(v){v/=255;return v<=.03928?v/12.92:Math.pow((v+.055)/1.055,2.4)};return .2126*f(c[0])+.7152*f(c[1])+.0722*f(c[2])}
+function px(x,y){var d=ctx.getImageData(x,y,1,1).data,a=d[3]/255;
+return {c:[0,1,2].map(function(i){return Math.round(d[i]*a+255*(1-a))}),a:d[3]}}
+function show(c,note){cur=c;var h=hex(c);$('sw').style.background=h;$('swl').textContent=h;
+$('vh').textContent=h;$('vr').textContent='rgb('+c.join(', ')+')';$('vs').textContent=hsl(c);
+document.querySelectorAll('[data-c]').forEach(function(b){b.disabled=false});
+var L=lum(c),w=(1.05)/(L+.05),k=(L+.05)/.05,best=w>=k?'white':'black',r=Math.max(w,k);
+$('ct').textContent=(note?note+' ':'')+(best==='white'?'White':'Black')+' text reads best here (contrast '+r.toFixed(2)+':1, '+(r>=4.5?'passes':'below')+' WCAG 4.5:1).'}
+function chips(el,list,fn){el.innerHTML='';list.forEach(function(c){var b=document.createElement('button');b.type='button';b.className='chip';
+b.style.background=hex(c);b.title=hex(c);b.setAttribute('aria-label','Use color '+hex(c));b.onclick=function(){fn(c)};el.appendChild(b)})}
+function addHist(c){var h=hex(c);hist=hist.filter(function(x){return hex(x)!==h});hist.unshift(c);hist=hist.slice(0,12);
+chips($('hi'),hist,function(x){show(x);st('Loaded '+hex(x)+' from recent picks.')})}
+function mark(){var r=cv.getBoundingClientRect(),m=$('mk');m.style.display='block';
+m.style.left=(pos.x+.5)/cv.width*r.width+'px';m.style.top=(pos.y+.5)/cv.height*r.height+'px'}
+function mag(x,y){lx.imageSmoothingEnabled=false;lx.clearRect(0,0,11,11);lx.drawImage(cv,x-5,y-5,11,11,0,0,11,11);
+var p=px(x,y);$('hv').textContent=hex(p.c)+' at x '+x+', y '+y+(p.a===0?' (transparent)':'')}
+function pick(){var p=px(pos.x,pos.y);
+if(p.a===0){show(p.c,'This pixel is fully transparent.');st('That pixel is fully transparent, so it has no real color. Try the solid part of the image.',true);return}
+show(p.c,p.a<255?'Semi-transparent pixel blended over white.':'');addHist(p.c);st('Picked '+hex(p.c)+'.')}
+function xy(e){var r=cv.getBoundingClientRect();return {x:Math.min(cv.width-1,Math.max(0,Math.floor((e.clientX-r.left)*cv.width/r.width))),y:Math.min(cv.height-1,Math.max(0,Math.floor((e.clientY-r.top)*cv.height/r.height)))}}
+cv.addEventListener('pointermove',function(e){if(!loaded)return;var p=xy(e);mag(p.x,p.y)});
+cv.addEventListener('click',function(e){if(!loaded)return;pos=xy(e);mark();mag(pos.x,pos.y);pick()});
+cv.addEventListener('keydown',function(e){if(!loaded)return;var s=e.shiftKey?10:1,k=e.key;
+if(k==='ArrowLeft')pos.x=Math.max(0,pos.x-s);else if(k==='ArrowRight')pos.x=Math.min(cv.width-1,pos.x+s);
+else if(k==='ArrowUp')pos.y=Math.max(0,pos.y-s);else if(k==='ArrowDown')pos.y=Math.min(cv.height-1,pos.y+s);
+else if(k==='Enter'||k===' '){e.preventDefault();pick();return}else return;
+e.preventDefault();mark();mag(pos.x,pos.y)});
+window.addEventListener('resize',function(){if(loaded)mark()});
+function palette(){var s=48,t=document.createElement('canvas');t.width=t.height=s;var x=t.getContext('2d');x.drawImage(cv,0,0,s,s);
+var d=x.getImageData(0,0,s,s).data,m={},i,k;
+for(i=0;i<d.length;i+=4){if(d[i+3]<128)continue;k=(d[i]>>4)<<8|(d[i+1]>>4)<<4|(d[i+2]>>4);var a=m[k]||(m[k]=[0,0,0,0]);a[0]+=d[i];a[1]+=d[i+1];a[2]+=d[i+2];a[3]++}
+var arr=Object.keys(m).map(function(k){var a=m[k];return {c:[Math.round(a[0]/a[3]),Math.round(a[1]/a[3]),Math.round(a[2]/a[3])],n:a[3]}}).sort(function(a,b){return b.n-a.n});
+var out=[];arr.forEach(function(o){if(out.length<6&&out.every(function(p){return Math.hypot(p[0]-o.c[0],p[1]-o.c[1],p[2]-o.c[2])>48}))out.push(o.c)});
+pal=out;chips($('pal'),out,function(c){show(c);addHist(c);st('Loaded '+hex(c)+' from the palette.')});$('cp').disabled=!out.length}
+function load(f){
+if(!f){return}
+if(OK.indexOf(f.type)<0){st('That file type isn’t supported. Please use JPG, PNG, WebP, GIF or BMP.',true);return}
+if(f.size>MAXB){st('That file is over 50 MB. Please resize or compress it and try again.',true);return}
+if(!f.size){st('That file is empty.',true);return}
+st('Loading image…');
+if(objUrl)URL.revokeObjectURL(objUrl);objUrl=URL.createObjectURL(f);
+var im=new Image();
+im.onload=function(){try{var w=im.naturalWidth,h=im.naturalHeight;if(!w||!h)throw 0;var sc=Math.min(1,MAXS/Math.max(w,h));
+cv.width=Math.max(1,Math.round(w*sc));cv.height=Math.max(1,Math.round(h*sc));ctx.clearRect(0,0,cv.width,cv.height);ctx.drawImage(im,0,0,cv.width,cv.height);
+loaded=true;$('drop').style.display='none';$('wrap').style.display='block';$('rs').disabled=false;
+pos={x:Math.floor(cv.width/2),y:Math.floor(cv.height/2)};mark();mag(pos.x,pos.y);palette();
+st('Image loaded ('+w+' × '+h+' px'+(sc<1?', scaled for sampling':'')+'). Click a pixel to pick its color.')}
+catch(e){st('This image couldn’t be read. It may be corrupted or too large for your browser.',true)}};
+im.onerror=function(){st('This image couldn’t be read. It may be corrupted or not a real image file.',true)};
+im.src=objUrl}
+function toast(m){var e=$('toast');e.textContent='\u2713 '+m;e.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(function(){e.classList.remove('on')},2200)}
+function copy(t,l){var done=function(){st('Copied '+l+': '+t.slice(0,40));toast('Copied '+l+' to clipboard')},fb=function(){var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();
+try{document.execCommand('copy')?done():st('Copy failed. Please select the text and copy it manually.',true)}catch(e){st('Copy failed. Please select the text and copy it manually.',true)}document.body.removeChild(a)};
+if(navigator.clipboard&&window.isSecureContext)navigator.clipboard.writeText(t).then(done,fb);else fb()}
+document.querySelectorAll('[data-c]').forEach(function(b){b.onclick=function(){var o=$(b.getAttribute('data-c'));if(cur)copy(o.textContent,o.previousElementSibling.textContent)}});
+$('cp').onclick=function(){if(pal.length)copy(':root{\n'+pal.map(function(c,i){return '  --color-'+(i+1)+': '+hex(c)+';'}).join('\n')+'\n}','palette CSS')};
+var fi=$('fi'),dr=$('drop');
+dr.onclick=function(){fi.click()};
+dr.onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();fi.click()}};
+$('ch').onclick=function(){fi.click()};
+fi.onchange=function(){load(fi.files[0]);fi.value=''};
+['dragenter','dragover'].forEach(function(n){document.addEventListener(n,function(e){e.preventDefault();dr.classList.add('over')})});
+['dragleave','drop'].forEach(function(n){document.addEventListener(n,function(e){e.preventDefault();dr.classList.remove('over')})});
+document.addEventListener('drop',function(e){var f=e.dataTransfer&&e.dataTransfer.files[0];if(f)load(f);else st('Please drop an image file.',true)});
+document.addEventListener('paste',function(e){var it=e.clipboardData&&e.clipboardData.items,i;if(!it)return;
+for(i=0;i<it.length;i++){if(it[i].type.indexOf('image/')===0){load(it[i].getAsFile());return}}});
+$('rs').onclick=function(){loaded=false;if(objUrl){URL.revokeObjectURL(objUrl);objUrl=null}
+$('wrap').style.display='none';$('mk').style.display='none';$('drop').style.display='flex';hist=[];pal=[];cur=null;
+$('hi').innerHTML='<p class="sm">Your last 12 picks.</p>';$('pal').innerHTML='<p class="sm">Dominant colors show up here.</p>';
+['vh','vr','vs'].forEach(function(i){$(i).textContent='–'});document.querySelectorAll('[data-c]').forEach(function(b){b.disabled=true});
+$('sw').style.background='';$('swl').textContent='No color yet';$('ct').textContent='Text contrast appears after you pick a color.';
+$('hv').textContent='Move over the image to preview the pixel under your pointer. Arrow keys work too.';lx.clearRect(0,0,11,11);
+$('cp').disabled=true;$('rs').disabled=true;st('Reset. Add a new image to start again.')};
+}catch(e){var s=document.getElementById('st');if(s){s.textContent='Something went wrong loading the tool. Please refresh the page.';s.className='err'}}})();
+</script>
+</body>
+</html>
